@@ -1,0 +1,283 @@
+/* Kumbara Topla - Liste Stilleri */
+
+/* Page Title */
+.page-title-section {
+  background: #fff;
+  padding: 16px 12px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  margin-bottom: 8px;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Stats Section */
+
+/* İstatistik Kutusu */
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.stat-box {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.stat-label {
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.stat-collected {
+  color: #4CAF50;
+}
+
+.stat-remaining {
+  color: #F7931E;
+}
+
+.list-container {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 48px 1fr 60px;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.list-item.collected {
+  background: #e8f5e9; /* Açık yeşil */
+}
+
+.list-item.expanded {
+  background: #fffdf8;
+  box-shadow: 0 3px 12px rgba(247,147,30,0.18);
+}
+
+.list-item.collected.expanded {
+  background: #c8e6c9; /* Daha koyu yeşil expanded için */
+}
+
+.list-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-icon.isletme {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+}
+
+.list-icon.ev {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+}
+
+.list-text h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.list-meta {
+  font-size: 0.78rem;
+  color: #999;
+  display: none;
+}
+
+.list-item.expanded .list-meta {
+  display: block;
+}
+
+/* Toplandı Checkbox */
+.collect-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+}
+
+.collect-checkbox input[type="checkbox"] {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  accent-color: #4CAF50;
+}
+
+/* Genişleyen detay bölümü */
+.list-details {
+  grid-column: 1 / -1;
+  margin-top: 8px;
+  background: #fafafa;
+  border: 1px dashed rgba(0,0,0,0.08);
+  border-radius: 10px;
+  padding: 0 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: max-height 300ms ease, opacity 300ms ease, transform 300ms ease, padding 300ms ease;
+}
+
+.list-item.expanded .list-details {
+  gap: 6px;
+  max-height: 400px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 10px 12px;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  font-size: 0.85rem;
+}
+
+.detail-key {
+  color: #666;
+  font-weight: 600;
+}
+
+.detail-val {
+  color: var(--text-color);
+}
+
+/* Kaydet Butonu */
+.save-section {
+  padding: 12px;
+  margin-bottom: 60px;
+}
+
+.save-btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Popup Stilleri */
+.popup.hidden {
+  display: none;
+}
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.popup-content {
+  width: calc(100% - 32px);
+  max-width: 420px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  padding: 16px;
+}
+.popup-content h3 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin: 0 0 12px 0;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.form-row label {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+.form-row select {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+.popup-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.btn.primary {
+  background: #FBB03B;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+.btn.secondary {
+  background: #f0f0f0;
+  color: #333;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2e7d32;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  z-index: 1100;
+}
+.toast.hidden { display: none; }

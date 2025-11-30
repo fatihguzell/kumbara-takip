@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İşletme Ekle - Kumbara Takip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="css/isletme-ekle.css" />
+</head>
+<body>
+    <div class="page-container">
+        <div class="mobile-frame">
+            <header class="app-header">
+                <div class="header-left">
+                    <a href="index.html" class="header-logo" aria-label="Kumbara Takip Ana Sayfa" data-dir="right">
+                        <img src="assets/anasayfa-logo.png" alt="Kumbara Takip" class="logo-full" />
+                    </a>
+                </div>
+                <div class="header-right">
+                    <p class="user-greeting">İşletme Ekle</p>
+                </div>
+            </header>
+
+            <main class="content">
+                <form id="isletmeForm" class="form">
+                    <div class="form-group">
+                        <label for="isletmeAdi">İşletme Adı</label>
+                        <input type="text" id="isletmeAdi" name="isletmeAdi" placeholder="İŞLETME ADI" required />
+                        <small class="error" id="err-isletmeAdi"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="isletmeSahibi">İşletme Sahibi</label>
+                        <input type="text" id="isletmeSahibi" name="isletmeSahibi" placeholder="İŞLETME SAHİBİ" required />
+                        <small class="error" id="err-isletmeSahibi"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefon">Telefon</label>
+                        <input type="text" id="telefon" name="telefon" placeholder="0000-000-00-00" inputmode="numeric" maxlength="14" required />
+                        <small class="error" id="err-telefon"></small>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="adres">Adres</label>
+                        <textarea id="adres" name="adres" placeholder="ADRES" rows="3" required></textarea>
+                        <small class="error" id="err-adres"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="referans">Referans</label>
+                        <input type="text" id="referans" name="referans" placeholder="REFERANS" />
+                        <small class="error" id="err-referans"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kumbaraTipi">Kumbara Tipi</label>
+                        <select id="kumbaraTipi" name="kumbaraTipi" required>
+                            <option value="">SEÇ</option>
+                            <option value="ISLETME">İŞLETME TİPİ</option>
+                            <option value="EV">EV TİPİ</option>
+                        </select>
+                        <small class="error" id="err-kumbaraTipi"></small>
+                    </div>
+
+                    <div class="form-group full">
+                        <button type="submit" class="btn btn-primary">Kaydet</button>
+                    </div>
+                </form>
+                <!-- Popup Container -->
+                <div id="popup" class="popup fade-in" aria-live="polite" aria-atomic="true" hidden>
+                    <div class="popup-content scale-in">
+                        <div class="popup-icon" id="popupIcon"></div>
+                        <div class="popup-text">
+                            <h4 id="popupTitle">Bilgi</h4>
+                            <p id="popupMessage">Mesaj içeriği</p>
+                        </div>
+                        <button class="popup-close" id="popupClose" aria-label="Kapat">×</button>
+                    </div>
+                </div>
+            </main>
+
+            <nav class="bottom-nav">
+                <a href="index.html" class="nav-item" data-dir="right">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" fill="currentColor"/>
+                    </svg>
+                    <span>Ana Sayfa</span>
+                </a>
+                <a href="isletmeler.html" class="nav-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 6H12L10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6ZM20 18H4V8H20V18Z" fill="currentColor"/>
+                    </svg>
+                    <span>İşletmeler</span>
+                </a>
+                <a href="admin.html" class="nav-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z" fill="currentColor"/>
+                    </svg>
+                    <span>Profil</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="js/isletme-ekle.js"></script>
+</body>
+</html>

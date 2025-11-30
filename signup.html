@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kumbara Takip - Kayıt Ol">
+  <title>Kayıt Ol - Kumbara Takip</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="animations.css">
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="page-container">
+    <div class="mobile-frame">
+      <header class="signup-header">
+        <img src="logo-full.png" alt="Kumbara Takip" class="logo-text" width="240">
+      </header>
+      <main class="signup-content">
+        <form class="signup-form" id="signupForm">
+          <div class="form-group">
+            <label for="fullName" class="form-label">Ad Soyad</label>
+            <input type="text" id="fullName" name="fullName" class="form-input" placeholder="Adınızı ve soyadınızı girin" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">E-posta</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="ornek@posta.com" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="username" class="form-label">Kullanıcı Adı</label>
+            <input type="text" id="username" name="username" class="form-input" placeholder="Kullanıcı adınız" required autocomplete="username">
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Şifre</label>
+            <input type="password" id="password" name="password" class="form-input" placeholder="Şifreniz" required autocomplete="new-password">
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword" class="form-label">Şifre (Tekrar)</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Şifrenizi tekrar girin" required autocomplete="new-password">
+          </div>
+          <div class="form-terms">
+            <label class="checkbox-container">
+              <input type="checkbox" id="terms" required>
+              <span class="checkmark"></span>
+              <span class="checkbox-label">Kullanıcı sözleşmesini kabul ediyorum</span>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Kayıt Ol</button>
+          <button type="button" class="btn btn-secondary btn-block mt-2" onclick="location.href='login.html'">Girişe Dön</button>
+        </form>
+      </main>
+          <p>© 2025 Kumbara Takip</p>
+            <nav class="bottom-nav">
+              <a href="index.html" class="nav-item" data-dir="right">
+        <p>© 2025 Kumbara Takip</p>
+      </footer>
+    </div>
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>

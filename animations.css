@@ -1,0 +1,29 @@
+/* Global animation utilities */
+:root {
+  --anim-fast: 150ms;
+  --anim-medium: 300ms;
+  --anim-slow: 500ms;
+  --anim-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-in { animation: fadeIn var(--anim-medium) var(--anim-ease) both; }
+.fade-out { animation: fadeOut var(--anim-medium) var(--anim-ease) both; }
+
+.slide-down { animation: slideDown var(--anim-medium) var(--anim-ease) both; }
+.slide-up { animation: slideUp var(--anim-medium) var(--anim-ease) both; }
+.slide-left { animation: slideLeft var(--anim-medium) var(--anim-ease) both; }
+.slide-right { animation: slideRight var(--anim-medium) var(--anim-ease) both; }
+
+.scale-in { animation: scaleIn var(--anim-medium) var(--anim-ease) both; }
+.scale-out { animation: scaleOut var(--anim-medium) var(--anim-ease) both; }
+
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes fadeOut { from { opacity: 1 } to { opacity: 0 } }
+
+@keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideUp { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(-8px); } }
+@keyframes slideLeft { from { opacity: 0; transform: translateX(12px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slideRight { from { opacity: 0; transform: translateX(-12px); } to { opacity: 1; transform: translateX(0); } }
+
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.98); } to { opacity: 1; transform: scale(1); } }
+@keyframes scaleOut { from { opacity: 1; transform: scale(1); } to { opacity: 0; transform: scale(0.98); } }

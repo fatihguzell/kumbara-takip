@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raporlar - Kumbara Takip</title>
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="animations.css" />
+  <link rel="stylesheet" href="raporlar.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <div class="page-container">
+    <div class="mobile-frame">
+      <header class="app-header">
+        <div class="header-left">
+          <a href="index.html" class="header-logo" aria-label="Kumbara Takip Ana Sayfa" data-dir="right">
+            <img src="anasayfa-logo.png" alt="Kumbara Takip" class="logo-full" />
+          </a>
+        </div>
+        <div class="header-right">
+          <p class="user-greeting">Raporlar</p>
+        </div>
+      </header>
+
+      <main class="app-main fade-in">
+        <section class="report-filter-section">
+          <div class="report-filter-row">
+            <select id="reportMonth" class="report-select">
+              <option value="01">Ocak</option>
+              <option value="02">Şubat</option>
+              <option value="03">Mart</option>
+              <option value="04">Nisan</option>
+              <option value="05">Mayıs</option>
+              <option value="06">Haziran</option>
+              <option value="07">Temmuz</option>
+              <option value="08">Ağustos</option>
+              <option value="09">Eylül</option>
+              <option value="10">Ekim</option>
+              <option value="11">Kasım</option>
+              <option value="12">Aralık</option>
+            </select>
+            <select id="reportYear" class="report-select"></select>
+          </div>
+        </section>
+
+        <section id="reportStats" class="report-stats-section">
+          <!-- Seçilen ay/yıl istatistikleri burada -->
+        </section>
+
+        <div id="aylikOrtalamaYilBox"></div>
+
+        <section id="yearStats" class="year-stats-section">
+          <!-- Yıllık istatistikler burada -->
+        </section>
+
+        <section id="autoComments" class="auto-comments-section">
+          <!-- Otomatik yorumlar burada -->
+        </section>
+      </main>
+
+      <nav class="bottom-nav">
+        <a href="index.html" class="nav-item" data-dir="right">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" fill="currentColor"/>
+          </svg>
+          <span>Ana Sayfa</span>
+        </a>
+        <a href="isletmeler.html" class="nav-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 6H12L10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6ZM20 18H4V8H20V18Z" fill="currentColor"/>
+          </svg>
+          <span>İşletmeler</span>
+        </a>
+        <a href="admin.html" class="nav-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+          </svg>
+          <span>Profil</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <button onclick="resetAdminData()" style="width:100%;margin:16px 0 0 0;padding:10px 0;background:#e74c3c;color:#fff;font-weight:700;border:none;border-radius:8px;cursor:pointer;">Tüm Verileri Sıfırla (Admin)</button>
+
+  <script src="raporlar.js"></script>
+</body>
+</html>

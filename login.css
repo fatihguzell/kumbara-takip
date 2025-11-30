@@ -1,0 +1,284 @@
+/* ====================================
+   LOGIN PAGE STYLES
+   ==================================== */
+
+.login-content {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+  background: white;
+}
+
+/* Header */
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-small {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(251, 176, 59, 0.1) 0%, rgba(247, 147, 30, 0.1) 100%);
+  border-radius: 50%;
+}
+
+.logo-small img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-text {
+  display: block;
+  margin: 0 auto 1rem;
+  max-width: 280px;
+  height: auto;
+}
+
+.login-header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-text {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #666;
+}
+
+/* Login Form */
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Password Wrapper with Toggle */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.toggle-password:hover svg path {
+  fill: var(--secondary-orange);
+}
+
+/* Form Options */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.form-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Custom Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  height: 18px;
+  width: 18px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  border-color: var(--secondary-orange);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+  border-color: var(--secondary-orange);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-label {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Forgot Password */
+.forgot-password {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--secondary-orange);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: var(--primary-orange);
+  text-decoration: underline;
+}
+
+.signup-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.signup-link:hover {
+  color: var(--secondary-orange);
+  border-bottom-color: var(--secondary-orange);
+}
+
+/* Button Block */
+.btn-block {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Error Message */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #ffebee;
+  border-left: 4px solid #e53935;
+  border-radius: 8px;
+  margin-top: 1rem;
+  animation: shake 0.5s ease;
+}
+
+.error-message span {
+  font-size: 0.9rem;
+  color: #c62828;
+  font-weight: 500;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+/* Footer */
+.login-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.login-footer p {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-content {
+    min-height: 100vh;
+    padding: 1.5rem 1.25rem;
+  }
+  
+  .login-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .logo-text {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-content {
+    padding: 1.25rem 1rem;
+  }
+  
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .form-links {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Focus States for Accessibility */
+.form-input:focus,
+.btn:focus,
+.toggle-password:focus {
+  outline: 2px solid var(--secondary-orange);
+  outline-offset: 2px;
+}
+
+.checkbox-container:focus-within .checkmark {
+  box-shadow: 0 0 0 3px rgba(247, 147, 30, 0.2);
+}

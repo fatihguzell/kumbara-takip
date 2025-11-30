@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kumbara Takip Sistemi - Ana Sayfa">
+    <title>Ana Sayfa - Kumbara Takip</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="page-container">
+        <div class="mobile-frame">
+            <!-- Header -->
+            <header class="app-header">
+                <div class="header-left">
+                    <a href="index.html" class="header-logo" aria-label="Kumbara Takip Ana Sayfa">
+                        <img src="anasayfa-logo.png" alt="Kumbara Takip" class="logo-full">
+                    </a>
+                </div>
+                <div class="header-right">
+                    <p class="user-greeting">Hoşgeldin, <span id="userName">Kullanıcı</span></p>
+                </div>
+            </header>
+
+            <!-- Main Content -->
+            <main class="app-main">
+                <!-- Summary Cards -->
+                <section class="summary-section">
+                    <div class="summary-card card-primary">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 9L4 4H20L21 9H3Z" fill="white"/>
+                                <path d="M4 10H20V20H4V10Z" fill="white"/>
+                                <path d="M9 14H12V20H9V14Z" fill="#FBB03B"/>
+                            </svg>
+                        </div>
+                        <div class="card-info">
+                            <p class="card-label">Aktif İşletmeler</p>
+                            <h2 class="card-value" id="activeCount">0</h2>
+                        </div>
+                    </div>
+
+                    <div class="summary-card card-secondary">
+                        <div class="card-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.8 10.9C9.53 10.31 8.8 9.7 8.8 8.75C8.8 7.66 9.81 6.9 11.5 6.9C13.28 6.9 13.94 7.75 14 9H16.21C16.14 7.28 15.09 5.7 13 5.19V3H10V5.16C8.06 5.58 6.5 6.84 6.5 8.77C6.5 11.08 8.41 12.23 11.2 12.9C13.7 13.5 14.2 14.38 14.2 15.31C14.2 16 13.71 17.1 11.5 17.1C9.44 17.1 8.63 16.18 8.52 15H6.32C6.44 17.19 8.08 18.42 10 18.83V21H13V18.85C14.95 18.48 16.5 17.35 16.5 15.3C16.5 12.46 14.07 11.49 11.8 10.9Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div class="card-info">
+                            <p class="card-label">Toplam Gelir</p>
+                            <h2 class="card-value" id="totalRevenue">12,450 ₺</h2>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Actions -->
+                <section class="quick-actions">
+<<<<<<< HEAD
+=======
+                    <h3 class="section-title">Hızlı İşlemler</h3>
+>>>>>>> 0b9f13c (v1.1.1 - Complete business management system with collection tracking and monthly reminders)
+                    <div class="action-grid">
+                        <button class="action-card" onclick="location.href='isletme-ekle.html'">
+                            <div class="action-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="#F7931E"/>
+                                </svg>
+                            </div>
+                            <p class="action-label">İşletme Ekle</p>
+                        </button>
+
+                        <button class="action-card" onclick="location.href='kumbara-topla.html'">
+                            <div class="action-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="9" stroke="#F7931E" stroke-width="2" fill="none"/>
+                                    <circle cx="12" cy="12" r="6" fill="#F7931E"/>
+                                    <text x="12" y="15" font-size="8" fill="white" text-anchor="middle" font-weight="bold">₺</text>
+                                </svg>
+                            </div>
+                            <p class="action-label">Kumbara Topla</p>
+                        </button>
+
+<<<<<<< HEAD
+                        <button class="action-card" onclick="location.href='sayim-yap.html'">
+=======
+                        <button class="action-card" onclick="location.href='count.html'">
+>>>>>>> 0b9f13c (v1.1.1 - Complete business management system with collection tracking and monthly reminders)
+                            <div class="action-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19ZM11 17H13V7H11V17ZM15 13H17V7H15V13ZM7 17H9V11H7V17Z" fill="#F7931E"/>
+                                </svg>
+                            </div>
+                            <p class="action-label">Sayım Yap</p>
+                        </button>
+
+                        <button class="action-card" onclick="location.href='toplananlar.html'">
+                            <div class="action-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z" fill="#F7931E"/>
+                                </svg>
+                            </div>
+                            <p class="action-label">Toplananlar</p>
+                        </button>
+                    </div>
+<<<<<<< HEAD
+                    <div class="action-grid" style="margin-top:8px; grid-template-columns: repeat(2, 1fr);">
+                        <button class="action-card action-card-wide" style="grid-column: span 2;" onclick="location.href='raporlar.html'">
+                            <div class="action-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="4,16 8,10 12,14 16,7 20,12" fill="none" stroke="#F7931E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="4" cy="16" r="1.5" fill="#F7931E"/>
+                                    <circle cx="8" cy="10" r="1.5" fill="#F7931E"/>
+                                    <circle cx="12" cy="14" r="1.5" fill="#F7931E"/>
+                                    <circle cx="16" cy="7" r="1.5" fill="#F7931E"/>
+                                    <circle cx="20" cy="12" r="1.5" fill="#F7931E"/>
+                                </svg>
+                            </div>
+                            <p class="action-label">Raporlar</p>
+                        </button>
+=======
+                </section>
+
+                <!-- Recent Activities -->
+                <section class="recent-section">
+                    <div class="section-header">
+                        <h3 class="section-title">Son Aktiviteler</h3>
+                        <a href="activities.html" class="view-all">Tümünü Gör</a>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon collected">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <p class="activity-title">Kumbara Toplandı</p>
+                                <p class="activity-detail">Bakkal Ahmet - #K-042</p>
+                            </div>
+                            <span class="activity-time">2 saat önce</span>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon counted">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.8 10.9C9.53 10.31 8.8 9.7 8.8 8.75C8.8 7.66 9.81 6.9 11.5 6.9C13.28 6.9 13.94 7.75 14 9H16.21C16.14 7.28 15.09 5.7 13 5.19V3H10V5.16C8.06 5.58 6.5 6.84 6.5 8.77C6.5 11.08 8.41 12.23 11.2 12.9C13.7 13.5 14.2 14.38 14.2 15.31C14.2 16 13.71 17.1 11.5 17.1C9.44 17.1 8.63 16.18 8.52 15H6.32C6.44 17.19 8.08 18.42 10 18.83V21H13V18.85C14.95 18.48 16.5 17.35 16.5 15.3C16.5 12.46 14.07 11.49 11.8 10.9Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <p class="activity-title">Sayım Tamamlandı</p>
+                                <p class="activity-detail">Toplam: 325 ₺ - #K-038</p>
+                            </div>
+                            <span class="activity-time">5 saat önce</span>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon added">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 13H13V19H11V13H5V11H11V5H13V11H19V13Z" fill="white"/>
+                                </svg>
+                            </div>
+                            <div class="activity-content">
+                                <p class="activity-title">Yeni Kumbara Eklendi</p>
+                                <p class="activity-detail">Market Zeynep - #K-045</p>
+                            </div>
+                            <span class="activity-time">1 gün önce</span>
+                        </div>
+>>>>>>> 0b9f13c (v1.1.1 - Complete business management system with collection tracking and monthly reminders)
+                    </div>
+                </section>
+            </main>
+
+            <!-- Bottom Navigation -->
+            <nav class="bottom-nav">
+                <a href="index.html" class="nav-item active">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 20V14H14V20H19V12H22L12 3L2 12H5V20H10Z" fill="currentColor"/>
+                    </svg>
+                    <span>Ana Sayfa</span>
+                </a>
+                <a href="isletmeler.html" class="nav-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 6H12L10 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6ZM20 18H4V8H20V18Z" fill="currentColor"/>
+                    </svg>
+                    <span>İşletmeler</span>
+                </a>
+                <a href="admin.html" class="nav-item">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<<<<<<< HEAD
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="currentColor"/>
+=======
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 5C13.66 5 15 6.34 15 8C15 9.66 13.66 11 12 11C10.34 11 9 9.66 9 8C9 6.34 10.34 5 12 5ZM12 19.2C9.5 19.2 7.29 17.92 6 15.98C6.03 13.99 10 12.9 12 12.9C13.99 12.9 17.97 13.99 18 15.98C16.71 17.92 14.5 19.2 12 19.2Z" fill="currentColor"/>
+>>>>>>> 0b9f13c (v1.1.1 - Complete business management system with collection tracking and monthly reminders)
+                    </svg>
+                    <span>Profil</span>
+                </a>
+            </nav>
+
+            <!-- Hatırlatma Popup -->
+            <div id="reminderPopup" class="popup-overlay hidden">
+                <div class="popup-box reminder-popup">
+                    <div class="reminder-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#FBB03B"/>
+                        </svg>
+                    </div>
+                    <h3 id="reminderTitle" class="reminder-title">Hatırlatma</h3>
+                    <p id="reminderMessage" class="reminder-message"></p>
+                    <button id="reminderOk" class="btn-primary-full">Tamam</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
