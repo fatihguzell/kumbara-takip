@@ -26,16 +26,14 @@ kumbara-takip/
 ├── login.html          # Kullanıcı giriş sayfası
 ├── index.html          # Ana sayfa (Dashboard)
 ├── admin.html          # Admin paneli
-├── css/
-│   ├── global.css      # Genel stiller ve değişkenler
-│   ├── intro.css       # Intro sayfası stilleri
-│   ├── login.css       # Login sayfası stilleri
-│   ├── home.css        # Ana sayfa stilleri
-│   └── admin.css       # Admin paneli stilleri
-├── js/
-│   ├── intro.js        # Intro sayfası JavaScript
-│   ├── login.js        # Login sayfası JavaScript
-│   ├── home.js         # Ana sayfa JavaScript
+├── global.css      # Genel stiller ve değişkenler
+├── intro.css       # Intro sayfası stilleri
+├── login.css       # Login sayfası stilleri
+├── home.css        # Ana sayfa stilleri
+├── admin.css       # Admin paneli stilleri
+├── intro.js        # Intro sayfası JavaScript
+├── login.js        # Login sayfası JavaScript
+├── home.js         # Ana sayfa JavaScript
 │   └── admin.js        # Admin paneli JavaScript
 └── assets/             # Görseller ve diğer dosyalar
     ├── logo-full.png   # Tam logo (KUMBARATAKIP yazılı)
